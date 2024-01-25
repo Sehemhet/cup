@@ -1,0 +1,68 @@
+@import url('reset.css');
+@import url('library.css');
+@import url('btn.css');
+@import url('media.css');
+
+.decor_materials {
+    display: none;
+}
+
+.decor_retrival {
+    display:none;
+}
+.decor_worker {
+    display:none;
+}
+.decor_buttons {
+    display:none;
+}
+.comment {
+    display:none;
+}
+.oven_materials {
+    display:none;
+}
+.semifinished_materials {
+    display:none;
+}
+.sticking_materials {
+    display:none;
+}
+.ready_materials,
+ .semifinished_ad,
+  .oven_buttons,
+   .semifinished_buttons {
+    display:none;
+}
+
+
+
+
+
+.act {
+    display:flex;
+}
+
+
+
+.tabs__block {
+    display:none;
+}
+.tabs__block:target {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+}
+.active-tab {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.tabs__block {
+    display:none;
+}
+.active-tab {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}

@@ -1,0 +1,197 @@
+.btn {
+    padding: 12px;
+    border-radius:8px;
+    white-space: nowrap;
+}
+
+.btn_blue {
+    background: var(--c3);
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    color: var(--c2);
+}
+.btn_blue:hover {
+    background: var(--c4);
+}
+.btn_blue:active {
+    background: var(--c5);
+}
+
+.btn_black {
+    background: var(--c1);
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    color: var(--c2);
+}
+.btn_black:hover {
+    background: var(--c4);
+}
+.btn_black:active {
+    background: var(--c5);
+}
+
+.btn_border {
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    color: var(--c1);
+    border:1px solid var(--c3);
+}
+.btn_border:hover {
+    border:1px solid var(--c4);
+}
+.btn_border:active {
+    border:1px solid var(--c5);
+}
+
+.btn_plus {
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+}
+
+.plus {
+    border-radius:50%;
+    background:var(--c3);
+    display:flex;
+    width:25px;
+    height:25px;
+    position:relative;
+}
+.plus:before {
+    content:'';
+    height:50%;
+    width:1px;
+    background:var(--c2);
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position:absolute;
+    top: 50%;
+}
+.plus:after {
+    content:'';
+    height:1px;
+    width:50%;
+    background:var(--c2);
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position:absolute;
+    top: 50%;
+}
+.btn_plus:hover .plus {
+    background:var(--c4);
+}
+.btn_plus:active .plus {
+    background:var(--c5);
+}
+
+.btn_tab {
+    font-weight:400;
+    color:var(--c7);
+}
+
+.btn_tab_active {
+    border-bottom: 2px solid var(--c7);
+    font-weight:600;
+    color:var(--c1);
+}
+
+.btn_arrow {
+    height:8px;
+    width:8px;
+    border-right:1px solid var(--c7);
+    border-bottom:1px solid var(--c7);
+    transform:rotate(45deg);
+}
+.btn_arrow_activate {
+    transform:rotate(225deg);
+}
+
+
+.num_min {
+    width:14px;
+    height:14px;
+    position:relative;
+}
+.num_min:before {
+    content:'';
+    width:100%;
+    height:1px;
+    position:absolute;
+    z-index:1;
+    top:50%;
+    transform:translateY(-50%);
+    left:0;
+    background:var(--c7);
+}
+.num_min:active {
+    transform:scale(1.1);
+}
+
+.num_max {
+    width:14px;
+    height:14px;
+    position:relative;
+}
+.num_max:before {
+    content:'';
+    width:100%;
+    height:1px;
+    position:absolute;
+    z-index:1;
+    top:50%;
+    transform:translateY(-50%);
+    left:0;
+    background:var(--c7);
+}
+.num_max:after {
+    content:'';
+    width:1px;
+    height:100%;
+    position:absolute;
+    z-index:1;
+    left:50%;
+    transform:translateX(-50%);
+    top:0;
+    background:var(--c7);
+}
+.num_max:active {
+    transform:scale(1.1);
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 5px solid var(--c7); /* Цвет границы */
+  border-radius: 2px; /* Скругление углов */
+}
+
+
+.numberDisplay::-webkit-inner-spin-button,
+.numberDisplay::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* Убираем внутренние и внешние стрелки в WebKit браузерах */
+}
+
+.numberDisplay {
+    padding: 6px; /* Подгоните под ваши требования */
+    font-size:16px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    width:60px;
+}
+
+
+.numberDisplay:before {
+    content: '−'; /* Минус */
+    margin-right: 5px; /* Расстояние между знаком и числом */
+}
+
+.numberDisplay:after {
+    content: '+'; /* Плюс */
+    margin-left: 5px; /* Расстояние между знаком и числом */
+}

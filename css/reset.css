@@ -1,0 +1,53 @@
+/*
+RESET
+*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    font-weight: 400;
+    line-height: normal;
+    color: inherit;
+    text-transform: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+button {
+    border: none;
+    all: initial;
+}
+
+a,
+a:hover,
+a:active,
+button:hover,
+input:hover {
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+main {
+    max-width:1320px;
+    overflow:hidden;
+    margin:0 auto;
+    padding:30px 10px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight:600;
+    font-size: 18px;
+}
+p, ul, li, span  {
+    font-weight:400;
+    font-size: 16px;
+}

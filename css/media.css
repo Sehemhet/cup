@@ -1,0 +1,36 @@
+.id_design,
+ .id_oven,
+  .id_semifinished,
+   .id_sticking,
+    .id_ready {
+    display:flex;
+    gap:10px;
+    width:100%;
+    justify-content:space-between;
+}
+@media (max-width:1000px) {
+    .list_open {
+        height: 100px;
+    }
+}
+@media (max-width:769px) {
+    .id_design,
+       .id_oven,
+        .id_semifinished,
+         .id_sticking,
+          .id_ready {
+        flex-wrap:wrap;
+    }
+    .id_design_item,
+     .id_oven_item,
+      .id_semifinished_item,
+       .id_sticking_item,
+        .id_ready_item {
+        width:100%;
+        flex:1 1 100%;
+    }
+    .list_open {
+        height: auto;
+    }
+}
+

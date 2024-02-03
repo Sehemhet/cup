@@ -3,44 +3,38 @@
 @import url('btn.css');
 @import url('media.css');
 
-.decor_materials {
+
+.js_cl_11,
+.js_cl_12,
+.js_cl_13,
+.js_cl_14,
+.js_cl_15,
+.js_cl_21,
+.js_cl_23,
+.js_cl_24,
+.js_cl_31,
+.js_cl_33,
+.js_cl_34,
+.js_cl_35,
+.js_cl_41,
+.js_cl_43,
+.js_cl_44,
+.js_cl_45,
+.js_cl_51,
+.js_cl_53,
+.js_cl_54,
+.js_cl_55,
+ .comment {
+    display:none;
+}
+
+
+.js_list {
     display: none;
 }
 
-.decor_retrival {
-    display:none;
-}
-.decor_worker {
-    display:none;
-}
-.decor_buttons {
-    display:none;
-}
-.comment {
-    display:none;
-}
-.oven_materials {
-    display:none;
-}
-.semifinished_materials {
-    display:none;
-}
-.sticking_materials {
-    display:none;
-}
-.ready_materials,
- .semifinished_ad,
-  .oven_buttons,
-   .semifinished_buttons {
-    display:none;
-}
-
-
-
-
-
 .act {
-    display:flex;
+    display: flex;
 }
 
 
@@ -66,3 +60,4 @@
     display: -ms-flexbox;
     display: flex;
 }
+

@@ -26,10 +26,24 @@
     color: var(--c2);
 }
 .btn_black:hover {
-    background: var(--c4);
+    opacity:.7;
 }
 .btn_black:active {
-    background: var(--c5);
+    opacity:.3;
+}
+
+.btn_red {
+    background: var(--c6);
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    color: var(--c2);
+}
+.btn_red:hover {
+    opacity:.7;
+}
+.btn_red:active {
+    opacity:.3;
 }
 
 .btn_border {
@@ -176,13 +190,13 @@ input[type="checkbox"] {
 }
 
 .numberDisplay {
-    padding: 6px; /* Подгоните под ваши требования */
+    padding: 4px; /* Подгоните под ваши требования */
     font-size:16px;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align: center;
-    width:60px;
+    width:40px;
 }
 
 

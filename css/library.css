@@ -64,6 +64,8 @@
 .pad14b {padding-bottom:14px;}
 
 
+.mar100T {margin-top:100px;}
+
 .icon {height:16px; width:16px;}
 
 ._br4 {border-radius:4px;}
@@ -83,12 +85,13 @@ box-shadow: 0 4px 14px rgba(0,0,0, 0.1);
 }
 
 .f_auto {flex:1 1 auto;}
-.f_80 {flex:1 1 80px; min-width:80px;}
+.f_80 {flex:1 1 80px; max-width:80px;}
 .f_300 {flex:1 1 300px;}
+.f_250 {flex: 1 1 250px;}
 .f_200 {flex:1 1 200px;}
 .f100 {flex:1 1 100%;}
 .f_100 {flex:1 1 100px;}
-
+.f_100_00 {flex:0 0 100px;}
 
 .T_t::first-letter {text-transform: uppercase;}
 .t {text-transform: lowercase;}
@@ -101,8 +104,8 @@ box-shadow: 0 4px 14px rgba(0,0,0, 0.1);
 .t_t {text-align: justify;}
 .t_active {font-weight:900}
 .t_active span {font-weight:900}
-.text_hover li:hover:not(.t_active) span {
-    font-weight: 900;
+.text_hover li:hover:not(.t_active) {
+    color: var(--c3);
 }
 
 
@@ -110,9 +113,10 @@ box-shadow: 0 4px 14px rgba(0,0,0, 0.1);
 .fs16 {font-size:16px;}
 
 .w {width:100%;}
+.w_100M {max-width:100px;}
 
 .h {height:100%;}
-.h400 {height:400px;}
+.h400 {max-height:400px;}
 .h_100 {min-height:80px;}
 
 
@@ -172,6 +176,12 @@ box-shadow: 0 4px 14px rgba(0,0,0, 0.1);
     justify-content:center;
     font-size:16px;
 }
+
+
+.hidden {
+    display: none !important;
+}
+
 
 /*
 body * {

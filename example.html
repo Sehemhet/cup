@@ -9,22 +9,51 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <section>
+    <div>
 
-        <button class="btn btn_blue" type="submit"> В піч </button>
-        <button class="btn btn_border" type="submit"> У брак </button>
-        <div></div>
+        <div class="f fc gap10 f_200 id_design_item">
+            <div class="w">
+                <h6>
+                    Працівник
+                </h6>
+            </div>
+            <div class="list_open shadow pad12 f gap20 f_f _br8 c7 fac w list_open" onclick="addValue('selectedWorker', 'listWorker')">
+                <span class="fs16" id="selectedWorker">Оберіть</span>
+                <div class="btn_arrow"></div>
+            </div>
 
-        <button class="btn btn_plus" type="submit">
-            <span class="plus">
+            <div id="decor_worker" class="shadow h400 _br8 f fc gap10 pad10 js_cl_14">
+                <div class="f f_f fac gap10 _b_g pad14t pad14b">
+                    <input class="input" type="text" placeholder="Пошук по назві" oninput="filterWorkerList()">
+                    <img class="contain icon" src="img/iconoir_search.png" alt="">
+                </div>
+        <ul id="listWorker" class="scroll f fc gap20 text_hover" onclick="handleWorkerItemClick(event)">
+                    <li class="f gap10 t_active" data-id="1">
+                        <span>
+                            Марія
+                        </span>
+                    </li>
+                    <li class="f gap10" data-id="2">
+                        <span>
+                            Петро
+                        </span>
+                    </li>
+                    <li class="f gap10" data-id="3">
+                        <span>
+                            Іван
+                        </span>
+                    </li>
+                    <li class="f gap10" data-id="4">
+                        <span>
+                            Олеся
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-            </span>
-            <span>
-                Додати на склад
-            </span>
-        </button>
 
-    </section>
+    </div>
 
 </body>
 </html>

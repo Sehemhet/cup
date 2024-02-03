@@ -21,14 +21,6 @@
           .id_ready {
         flex-wrap:wrap;
     }
-    .id_design_item,
-     .id_oven_item,
-      .id_semifinished_item,
-       .id_sticking_item,
-        .id_ready_item {
-        width:100%;
-        flex:1 1 100%;
-    }
     .list_open {
         height: auto;
     }

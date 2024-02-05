@@ -65,9 +65,14 @@
 
 
 .mar100T {margin-top:100px;}
+.mar50T {margin-top:50px;}
 
 .icon {height:16px; width:16px;}
-
+.icon_tab {
+    height:50px;
+    width:50px;
+    object-fit:contain;
+}
 ._br4 {border-radius:4px;}
 ._br8 {border-radius:8px;}
 
@@ -92,6 +97,8 @@ box-shadow: 0 4px 14px rgba(0,0,0, 0.1);
 .f100 {flex:1 1 100%;}
 .f_100 {flex:1 1 100px;}
 .f_100_00 {flex:0 0 100px;}
+.f_80_00 {flex:0 0 80px;}
+.f_250_10 {flex:1 0 250px;}
 
 .T_t::first-letter {text-transform: uppercase;}
 .t {text-transform: lowercase;}
@@ -182,6 +189,7 @@ box-shadow: 0 4px 14px rgba(0,0,0, 0.1);
     display: none !important;
 }
 
+.tab_img {display:none;}
 
 /*
 body * {

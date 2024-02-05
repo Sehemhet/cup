@@ -26,3 +26,16 @@
     }
 }
 
+@media (max-width:600px) {
+    .tab_img {
+        display:flex;
+    }
+    .tab_chapter {
+        display:none;
+    }
+    #id_header {
+        width:100%;
+        display:flex;
+        justify-content:space-around;
+    }
+}

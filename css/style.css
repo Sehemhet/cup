@@ -52,12 +52,17 @@
     display: -ms-flexbox;
     display: flex;
 }
-.tabs__block {
+
+.tabs__block_stock {
     display:none;
 }
-.active-tab {
+.tabs__block_stock:target {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+}
+.active-tab-stock {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
-

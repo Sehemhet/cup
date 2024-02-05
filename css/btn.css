@@ -121,6 +121,8 @@
 }
 .btn_arrow_activate {
     transform:rotate(225deg);
+    border-right:1px solid var(--c4);
+    border-bottom:1px solid var(--c4);
 }
 
 

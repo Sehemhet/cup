@@ -1,4 +1,4 @@
-function single_choice(event, targetId, sourceSelector, menuClass, toggleClass, inputIdToClear) {
+function single_choice(event, targetId, sourceSelector, menuClass, toggleClass, inputIdToClear, arrowIdToRemove) {
     let item = event.target.closest(sourceSelector);
     if (item) {
         let selectedElement = document.getElementById(targetId);
@@ -17,5 +17,10 @@ function single_choice(event, targetId, sourceSelector, menuClass, toggleClass, 
 
         // Очищаем поле ввода и обновляем список
         clearInput(inputIdToClear);
+
+        // Если передан идентификатор стрелочки, убираем класс btn_arrow_activate
+        if (arrowIdToRemove) {
+            removeArrowActivateClass(arrowIdToRemove);
+        }
     }
 }

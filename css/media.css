@@ -14,13 +14,6 @@
     }
 }
 @media (max-width:769px) {
-    .id_design,
-       .id_oven,
-        .id_semifinished,
-         .id_sticking,
-          .id_ready {
-        flex-wrap:wrap;
-    }
     .list_open {
         height: auto;
     }

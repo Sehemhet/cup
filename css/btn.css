@@ -96,9 +96,11 @@
 }
 .btn_plus:hover .plus {
     background:var(--c4);
+    cursor: pointer;
 }
 .btn_plus:active .plus {
     background:var(--c5);
+    cursor: pointer;
 }
 
 .btn_tab {
@@ -198,7 +200,7 @@ input[type="checkbox"] {
     justify-content:center;
     align-items:center;
     text-align: center;
-    width:40px;
+    width:60px;
 }
 
 

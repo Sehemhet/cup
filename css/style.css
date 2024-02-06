@@ -24,6 +24,9 @@
 .js_cl_53,
 .js_cl_54,
 .js_cl_55,
+.js_cl_11_1,
+.js_cl_15_glass,
+.js_cl_Insert,
  .comment {
     display:none;
 }
@@ -65,4 +68,13 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+}
+
+.stock_glass_popup {
+    background:rgba(0,0,0,0.5);
+    position:absolute;
+    z-index:99;
+    height:100vw;
+    width:100%;
+    display:none;
 }

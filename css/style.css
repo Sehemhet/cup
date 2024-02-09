@@ -27,6 +27,8 @@
 .js_cl_11_1,
 .js_cl_15_glass,
 .js_cl_Insert,
+.id_stock_buttons_1,
+.id_stock_buttons_2,
  .comment {
     display:none;
 }
@@ -39,7 +41,6 @@
 .act {
     display: flex;
 }
-
 
 
 .tabs__block {
@@ -70,11 +71,15 @@
     display: flex;
 }
 
-.stock_glass_popup {
-    background:rgba(0,0,0,0.5);
-    position:absolute;
-    z-index:99;
-    height:100vw;
-    width:100%;
-    display:none;
+.id_report_chapter_item_arrow {
+    display:flex;
+    align-items:center;
+    font-size:30px;
+    justify-content:center;
+}
+
+
+/*
+* {
+    border:1px solid green;
 }

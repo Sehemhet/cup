@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Показать первый таб при загрузке страницы
-    showTabStock('stock_glass');
+    showTabStock('tab_design');
 });
 
 function showTabStock(tabId, button) {

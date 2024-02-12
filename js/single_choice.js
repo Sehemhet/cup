@@ -24,3 +24,22 @@ function single_choice(event, targetId, sourceSelector, menuClass, toggleClass, 
         }
     }
 }
+
+function moveInputToSelected(inputId, selectedId, menuCloseId, searchCleanId, arrowBackId) {
+    let newItemInput = document.getElementById(inputId);
+    let selectedElement = document.getElementById(selectedId);
+    selectedElement.innerHTML = ''; // Очищаем содержимое выбранного элемента
+    selectedElement.appendChild(newItemInput); // Перемещаем поле ввода внутрь выбранного элемента
+    newItemInput.focus(); // Устанавливаем фокус на поле ввода
+
+    // Закрываем выпадающее меню после выбора
+    removeActClass(menuCloseId);
+
+    // Очищаем поле ввода и обновляем список
+    clearInput(searchCleanId);
+
+    // Если передан идентификатор стрелочки, убираем класс btn_arrow_activate
+    if (arrowBackId) {
+        removeArrowActivateClass(arrowBackId);
+    }
+}

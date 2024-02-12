@@ -1,7 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Показать первый таб при загрузке страницы
     showTab('id_design');
+
+    // Получить первую кнопку и добавить класс btn_tab_active
+    var firstButton = document.querySelector('.btn_tab');
+    if (firstButton) {
+        firstButton.classList.add('btn_tab_active');
+    }
 });
+
 
 function showTab(tabId, button) {
     // Скрыть все табы

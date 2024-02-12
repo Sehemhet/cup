@@ -13,3 +13,21 @@ function liveSearch(elementId, searchText) {
         }
     });
 }
+
+
+function liveSearchName(className) {
+    var input, filter, items, i, actionSpan, txtValue;
+    input = document.getElementById('liveSearch_' + className.replace('id_report_post_item_', ''));
+    filter = input.value.toUpperCase();
+    items = document.getElementsByClassName('id_report_post_item');
+
+    for (i = 0; i < items.length; i++) {
+        actionSpan = items[i].getElementsByClassName(className)[0];
+        txtValue = actionSpan.textContent || actionSpan.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            items[i].style.display = ""; // Показываем элемент
+        } else {
+            items[i].style.display = "none"; // Скрываем элемент
+        }
+    }
+}

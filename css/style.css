@@ -24,14 +24,20 @@
 .js_cl_53,
 .js_cl_54,
 .js_cl_55,
-.js_cl_11_1,
-.js_cl_15_glass,
-.js_cl_Insert,
-.id_stock_buttons_1,
-.id_stock_buttons_2,
+.glass_stock,
+.glass_buttons,
+.insert_stock,
+.insert_buttons,
+.master_stock,
+.master_buttons,
+.glass_add,
+.insert_add,
+.master_add,
  .comment {
     display:none;
 }
+
+
 
 
 .js_list {
@@ -76,6 +82,9 @@
     align-items:center;
     font-size:30px;
     justify-content:center;
+}
+.id_report_post_item {
+    display:flex;
 }
 
 

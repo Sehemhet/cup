@@ -169,32 +169,30 @@
                         Виїмка
                     </h6>
                 </div>
-                <div class="list_open shadow pad12 f gap20 f_f _br8 c7 fac" onclick="openMenu('js_cl_13','js_cl_13_arrow')">
-                    <span class="fs16 w" id="js_cl_13_selected">
-                        Оберіть
-                    </span>
-                    <div id="js_cl_13_arrow" class="btn_arrow">
+                <div class="list_open shadow pad12 f gap20 f_f _br8 c7 fac" >
+                    <ul class="scroll f fc gap10 text_hover countRed commaThousand" id="js_cl_13_selected">
+                        <li id="js_cl_13_selected_li" class="fs16 f f_f fac scroll_non pad8r">
+                            <span class="">
+                                Оберіть
+                            </span>
+                            <div id="js_cl_13_arrow" class="btn_arrow " onclick="openMenu('js_cl_13','js_cl_13_arrow')">
 
-                    </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
                 <div class="shadow h300M _br8 f fc gap10 pad10 js_cl_13">
                     <div class="f f_f fac gap10 _b_b pad14t pad14b">
                         <input id="js_cl_13_search" class="input" type="text" placeholder="Пошук по назві" oninput="liveSearch('js_cl_13_list', this.value)">
                         <img class="contain icon" src="img/iconoir_search.png" alt="">
                     </div>
-                    <ul id="js_cl_13_list" class="scroll f fc gap10 text_hover countRed commaThousand" onclick="single_choice(event, 'js_cl_13_selected', 'li[data-id]', 'js_cl_13', 'act', 'js_cl_13_search','js_cl_13_arrow')">
-                        <li class="f fc">
-                            <div class="f f_f fac">
-                                <div class="f fac gap10">
-                                    <span>Індивідуально</span>
-                                </div>
-                                <div class="f fac f_f gap10 pad12">
-                                    <button class="num_max"  type="button" onclick="openMenu('comment')"></button>
-                                </div>
-                            </div>
-                            <input class="input comment _b_b pad6t pad6b" type="text" placeholder="Коментар">
+                    <ul id="js_cl_13_list" class="scroll f fc gap10 text_hover countRed commaThousand" onclick="marking('js_cl_13_list')">
+                        <li data-id="1" class="f f_f fac gold pad2 list-item">
+                            <span class="w">
+                                <input class="input _b_b pad6t pad6b" type="text" placeholder="Коментар">
+                            </span>
                         </li>
-                        <li data-id="1" class="f f_f fac gold">
+                        <li data-id="2" class="f f_f fac gold pad2 list-item">
                             <div class="f fac gap10 f_auto">
                                 <span class="item_number" data-count="2500" data-max="2500">2500</span>
                                 <span>Куля</span>
@@ -205,7 +203,7 @@
                                 <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
                             </div>
                         </li>
-                        <li data-id="2" class="f f_f fac gold">
+                        <li data-id="3" class="f f_f fac gold pad2 list-item">
                             <div class="f fac gap10 f_auto">
                                 <span class="item_number" data-count="1500" data-max="1500">1500</span>
                                 <span>Герб</span>
@@ -216,7 +214,7 @@
                                 <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
                             </div>
                         </li>
-                        <li data-id="3" class="f f_f fac gold">
+                        <li data-id="4" class="f f_f fac gold pad2 list-item">
                             <div class="f fac gap10 f_auto">
                                 <span class="item_number" data-count="3000" data-max="3000">3000</span>
                                 <span>Монета</span>
@@ -227,53 +225,9 @@
                                 <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
                             </div>
                         </li>
-                        <li data-id="4" class="f f_f fac gold">
-                            <div class="f fac gap10 f_auto">
-                                <span class="item_number" data-count="4000" data-max="4000">4000</span>
-                                <span>Якір</span>
-                            </div>
-                            <div class="f fac f_f w_100M gap5">
-                                <button class="num_min f" aria-label="Decrement number" onclick="changeNumber(this.parentNode.parentNode, -1)" tabindex="-1" title="Decrement number" type="button"></button>
-                                <input class="f numberDisplay shadow _br4 shadow_non" type="number" value="0" min="0" max="200" oninput="handleManualInput(this)">
-                                <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
-                            </div>
-                        </li>
-                        <li data-id="5" class="f f_f fac gold">
-                            <div class="f fac gap10 f_auto">
-                                <span class="item_number" data-count="1000" data-max="1000">1000</span>
-                                <span>Вушко</span>
-                            </div>
-                            <div class="f fac f_f w_100M gap5">
-                                <button class="num_min f" aria-label="Decrement number" onclick="changeNumber(this.parentNode.parentNode, -1)" tabindex="-1" title="Decrement number" type="button"></button>
-                                <input class="f numberDisplay shadow _br4 shadow_non" type="number" value="0" min="0" max="200" oninput="handleManualInput(this)">
-                                <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
-                            </div>
-                        </li>
-                        <li data-id="6" class="f f_f fac gold">
-                            <div class="f fac gap10 f_auto">
-                                <span class="item_number" data-count="3000" data-max="3000">3000</span>
-                                <span>Кильце</span>
-                            </div>
-                            <div class="f fac f_f w_100M gap5">
-                                <button class="num_min f" aria-label="Decrement number" onclick="changeNumber(this.parentNode.parentNode, -1)" tabindex="-1" title="Decrement number" type="button"></button>
-                                <input class="f numberDisplay shadow _br4 shadow_non" type="number" value="0" min="0" max="200" oninput="handleManualInput(this)">
-                                <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
-                            </div>
-                        </li>
-                        <li data-id="7" class="f f_f fac gold">
-                            <div class="f fac gap10 f_auto">
-                                <span class="item_number" data-count="3000" data-max="3000">3000</span>
-                                <span>Ручка</span>
-                            </div>
-                            <div class="f fac f_f w_100M gap5">
-                                <button class="num_min f" aria-label="Decrement number" onclick="changeNumber(this.parentNode.parentNode, -1)" tabindex="-1" title="Decrement number" type="button"></button>
-                                <input class="f numberDisplay shadow _br4 shadow_non" type="number" value="0" min="0" max="200" oninput="handleManualInput(this)">
-                                <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
-                            </div>
-                        </li>
                     </ul>
                     <div class="f fc gap10 _br8">
-                        <button id="js_cl_13_enter" class="btn btn_black f_auto" type="submit">Застосувати</button>
+                        <button id="js_cl_13_enter" class="btn btn_black f_auto" type="submit" onclick="transfer('js_cl_13_list','js_cl_13_selected'); applyChanges();">Застосувати</button>
                     </div>
                 </div>
             </div>
@@ -2077,5 +2031,7 @@
 <script src="js/currentDateTime.js"></script>
 <script src="js/column_width.js"></script>
 <script src="js/sorting.js"></script>
+<script src="js/marking.js"></script>
+<script src="js/transfer.js"></script>
 </body>
 </html>

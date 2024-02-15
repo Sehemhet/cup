@@ -75,6 +75,7 @@
 .pad8r {padding-right:8px;}
 .pad8t {padding-top:8px;}
 .pad8b {padding-bottom:8px;}
+.pad2 {padding:2px;}
 
 
 .mar100T {margin-top:100px;}
@@ -206,8 +207,15 @@ box-shadow: 0 4px 14px rgba(0,0,0, 0.1);
 .hidden {
     display: none !important;
 }
+.scroll_non {
+    overflow-x: hidden !important;
+}
 
 .tab_img {display:none; width:30px;}
+
+.transfer {
+    color: var(--c4) !important;
+}
 
 /*
 body * {

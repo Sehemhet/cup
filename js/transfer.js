@@ -1,4 +1,4 @@
-function transfer(sourceListId, destinationId) {
+function transfer(sourceListId, destinationId, arrowIdToRemove, menuClass, inputIdToClear) {
     var sourceList = document.getElementById(sourceListId);
     var destinationList = document.getElementById(destinationId);
 
@@ -8,26 +8,45 @@ function transfer(sourceListId, destinationId) {
         item.classList.remove('transfer'); // Убираем класс 'transfer'
         destinationList.appendChild(item); // Перемещаем элемент в другой список
     });
+
+    // Закрываем выпадающее меню после выбора
+    if (menuClass) {
+        removeActClass(menuClass);
+    }
+
+    // Если передан идентификатор стрелочки, убираем класс btn_arrow_activate
+    if (arrowIdToRemove) {
+        removeArrowActivateClass(arrowIdToRemove);
+    }
 }
 
-document.getElementById('js_cl_13_selected').addEventListener('click', function(event) {
-    var target = event.target.closest('li');
-    if (target) {
-        var inputText = target.querySelector('.input');
-        var inputValue = target.querySelector('.numberDisplay');
 
-        if ((inputText && !inputText.value.trim()) || (inputValue && parseInt(inputValue.value) === 0)) {
-            // Если значение инпута текста пустое или значение числового инпута равно нулю,
-            // перемещаем пункт обратно в исходный список
-            target.parentNode.removeChild(target);
-            document.getElementById('js_cl_13_list').appendChild(target);
+function moveListItem(sourceListId, destinationListId) {
+    var sourceList = document.getElementById(sourceListId);
+    var destinationList = document.getElementById(destinationListId);
 
-            // Проверяем, пуст ли список js_cl_13_selected, и скрываем его, если это так
-            var selectedList = document.getElementById('js_cl_13_selected');
-            if (selectedList.childElementCount === 0) {
-                selectedList.style.display = 'none';
+    return function(event) {
+        var target = event.target.closest('li');
+        if (target) {
+            var inputText = target.querySelector('.input');
+            var inputValue = target.querySelector('.numberDisplay');
+
+            if ((inputText && !inputText.value.trim()) || (inputValue && parseInt(inputValue.value) === 0)) {
+                // Если значение инпута текста пустое или значение числового инпута равно нулю,
+                // перемещаем пункт обратно в исходный список
+                target.parentNode.removeChild(target);
+                destinationList.appendChild(target);
+
+                // Проверяем, пуст ли список, и скрываем его, если это так
+                if (destinationList.childElementCount === 0) {
+                    destinationList.style.display = 'none';
+                }
             }
         }
-    }
-});
+    };
+}
 
+document.getElementById('js_cl_13_selected').addEventListener('click', moveListItem('js_cl_13_selected', 'js_cl_13_list'));
+document.getElementById('js_cl_33_selected').addEventListener('click', moveListItem('js_cl_33_selected', 'js_cl_33_list'));
+document.getElementById('js_cl_43_selected').addEventListener('click', moveListItem('js_cl_43_selected', 'js_cl_43_list'));
+document.getElementById('js_cl_53_selected').addEventListener('click', moveListItem('js_cl_53_selected', 'js_cl_53_list'));

@@ -169,66 +169,29 @@
                         Виїмка
                     </h6>
                 </div>
-                <div class="list_open shadow pad12 f gap20 f_f _br8 c7 fac">
-                    <ul class="scroll f fc gap10 text_hover countRed commaThousand" id="js_cl_13_selected">
-                        <li id="js_cl_13_selected_li" class="fs16 f f_f fac scroll_non pad8r" onclick="openMenu('js_cl_13','js_cl_13_arrow')">
-                            <span class="">
-                                Оберіть
-                            </span>
-                            <div id="js_cl_13_arrow" class="btn_arrow ">
-
-                            </div>
-                        </li>
-                    </ul>
+                <div class="shadow pad12 f gap20 f_f _br8 c7 fac w list_open" onclick="openMenu('js_cl_13','js_cl_13_arrow')">
+                    <span class="fs16" id="js_cl_13_selected">Оберіть</span>
+                    <div id="js_cl_13_arrow" class="btn_arrow"></div>
                 </div>
                 <div class="shadow h300M _br8 f fc gap10 pad10 js_cl_13">
                     <div class="f f_f fac gap10 _b_b pad14t pad14b">
                         <input id="js_cl_13_search" class="input" type="text" placeholder="Пошук по назві" oninput="liveSearch('js_cl_13_list', this.value)">
                         <img class="contain icon" src="img/iconoir_search.png" alt="">
                     </div>
-                    <ul id="js_cl_13_list" class="scroll f fc gap10 text_hover countRed commaThousand" onclick="marking('js_cl_13_list')">
-                        <li data-id="1" class="f f_f fac gold pad2 list-item">
-                            <span class="w">
-                                <input class="input _b_b pad6t pad6b" type="text" placeholder="Коментар">
-                            </span>
+                    <ul id="js_cl_13_list" class="scroll f fc gap10 text_hover" onclick="single_choice(event, 'js_cl_13_selected', 'li[data-id]', 'js_cl_13', 'act', 'js_cl_13_search','js_cl_13_arrow')">
+                        <li class="f gap10 list-item gold" data-id="1">
+                            Куля
                         </li>
-                        <li data-id="2" class="f f_f fac gold pad2 list-item">
-                            <div class="f fac gap10 f_auto">
-                                <span class="item_number" data-count="2500" data-max="2500">2500</span>
-                                <span>Куля</span>
-                            </div>
-                            <div class="f fac f_f w_100M gap5">
-                                <button class="num_min f" aria-label="Decrement number" onclick="changeNumber(this.parentNode.parentNode, -1)" tabindex="-1" title="Decrement number" type="button"></button>
-                                <input class="f numberDisplay shadow _br4 shadow_non" type="number" value="0" min="0" max="100" oninput="handleManualInput(this)">
-                                <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
-                            </div>
+                        <li class="f gap10 list-item gold" data-id="2">
+                            Герб
                         </li>
-                        <li data-id="3" class="f f_f fac gold pad2 list-item">
-                            <div class="f fac gap10 f_auto">
-                                <span class="item_number" data-count="1500" data-max="1500">1500</span>
-                                <span>Герб</span>
-                            </div>
-                            <div class="f fac f_f w_100M gap5">
-                                <button class="num_min f" aria-label="Decrement number" onclick="changeNumber(this.parentNode.parentNode, -1)" tabindex="-1" title="Decrement number" type="button"></button>
-                                <input class="f numberDisplay shadow _br4 shadow_non" type="number" value="0" min="0" max="200" oninput="handleManualInput(this)">
-                                <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
-                            </div>
+                        <li class="f gap10 list-item gold" data-id="3">
+                            Якір
                         </li>
-                        <li data-id="4" class="f f_f fac gold pad2 list-item">
-                            <div class="f fac gap10 f_auto">
-                                <span class="item_number" data-count="3000" data-max="3000">3000</span>
-                                <span>Монета</span>
-                            </div>
-                            <div class="f fac f_f w_100M gap5">
-                                <button class="num_min f" aria-label="Decrement number" onclick="changeNumber(this.parentNode.parentNode, -1)" tabindex="-1" title="Decrement number" type="button"></button>
-                                <input class="f numberDisplay shadow _br4 shadow_non" type="number" value="0" min="0" max="200" oninput="handleManualInput(this)">
-                                <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
-                            </div>
+                        <li class="f gap10 list-item gold" data-id="4">
+                            Монета
                         </li>
                     </ul>
-                    <div class="f fc gap10 _br8">
-                        <button id="js_cl_13_enter" class="btn btn_black f_auto" type="submit" onclick="transfer('js_cl_13_list','js_cl_13_selected','js_cl_13_arrow','act','js_cl_13_search');">Застосувати</button>
-                    </div>
                 </div>
             </div>
             <!--        Працівник-->
@@ -404,22 +367,22 @@
                         <li data-id="1" class="f gap10 list-item" data-count="1000" data-name="Стакан віскі">
                             <span class="list-item-count">1000</span>
                             <span class="list-item-name">Фужер</span>
-                            <span class="list-item-name gold">Куля (2)</span>
+                            <span class="list-item-name gold">Куля</span>
                         </li>
                         <li data-id="2" class="f gap10 list-item" data-count="2000" data-name="Чарка">
                             <span class="list-item-count">2000</span>
                             <span class="list-item-name">Стакан</span>
-                            <span class="list-item-name gold">Герб (1)</span>
+                            <span class="list-item-name gold">Герб</span>
                         </li>
                         <li data-id="3" class="f gap10 list-item" data-count="3000" data-name="Чашка">
                             <span class="list-item-count">3000</span>
                             <span class="list-item-name">Келих</span>
-                            <span class="list-item-name gold">Монета (3)</span>
+                            <span class="list-item-name gold">Монета</span>
                         </li>
                         <li data-id="4" class="f gap10 list-item" data-count="4000" data-name="Пляшка">
                             <span class="list-item-count">4000</span>
                             <span class="list-item-name">Пляшка</span>
-                            <span class="list-item-name gold">Якір (1)</span>
+                            <span class="list-item-name gold">Якір</span>
                         </li>
                     </ul>
                 </div>
@@ -519,22 +482,22 @@
                         <li data-id="1" class="f gap10 list-item" data-count="1000" data-name="Фужер">
                             <span class="list-item-count f_80_00">1000</span>
                             <span class="list-item-name">Фужер</span>
-                            <span class="list-item-name gold">Куля (2)</span>
+                            <span class="list-item-name gold">Куля</span>
                         </li>
                         <li data-id="2" class="f gap10 list-item" data-count="2000" data-name="Стакан">
                             <span class="list-item-count f_80_00">2000</span>
                             <span class="list-item-name">Стакан</span>
-                            <span class="list-item-name gold">Герб (1)</span>
+                            <span class="list-item-name gold">Герб</span>
                         </li>
                         <li data-id="3" class="f gap10 list-item" data-count="3000" data-name="Келих">
                             <span class="list-item-count f_80_00">3000</span>
                             <span class="list-item-name">Келих</span>
-                            <span class="list-item-name gold">Монета (3)</span>
+                            <span class="list-item-name gold">Монета</span>
                         </li>
                         <li data-id="3" class="f gap10 list-item" data-count="4000" data-name="Пляшка">
                             <span class="list-item-count f_80_00">4000</span>
                             <span class="list-item-name">Пляшка</span>
-                            <span class="list-item-name gold">Якір (1)</span>
+                            <span class="list-item-name gold">Якір</span>
                         </li>
                     </ul>
                 </div>
@@ -569,22 +532,22 @@
                         <li data-id="1" class="f gap10 list-item" data-count="500" data-name="Стакан віскі">
                             <span class="list-item-count">500</span>
                             <span class="list-item-name">Фужер</span>
-                            <span class="list-item-name gold">Куля (2)</span>
+                            <span class="list-item-name gold">Куля</span>
                         </li>
                         <li data-id="2" class="f gap10 list-item" data-count="1800" data-name="Чарка">
                             <span class="list-item-count">1800</span>
                             <span class="list-item-name">Стакан</span>
-                            <span class="list-item-name gold">Герб (1)</span>
+                            <span class="list-item-name gold">Герб</span>
                         </li>
                         <li data-id="3" class="f gap10 list-item" data-count="2500" data-name="Чашка">
                             <span class="list-item-count">2500</span>
                             <span class="list-item-name">Келих</span>
-                            <span class="list-item-name gold">Монета (3)</span>
+                            <span class="list-item-name gold">Монета</span>
                         </li>
                         <li data-id="4" class="f gap10 list-item" data-count="3000" data-name="Пляшка">
                             <span class="list-item-count">3000</span>
                             <span class="list-item-name">Пляшка</span>
-                            <span class="list-item-name gold">Якір (1)</span>
+                            <span class="list-item-name gold">Якір</span>
                         </li>
                     </ul>
                 </div>
@@ -809,22 +772,22 @@
                         <li data-id="1" class="f gap10 list-item" data-count="1000" data-name="Стакан віскі">
                             <span class="list-item-count">1000</span>
                             <span class="list-item-name">Фужер</span>
-                            <span class="list-item-name gold">Куля (2)</span>
+                            <span class="list-item-name gold">Куля</span>
                         </li>
                         <li data-id="2" class="f gap10 list-item" data-count="2000" data-name="Чарка">
                             <span class="list-item-count">2000</span>
                             <span class="list-item-name">Стакан</span>
-                            <span class="list-item-name gold">Герб (1)</span>
+                            <span class="list-item-name gold">Герб</span>
                         </li>
                         <li data-id="3" class="f gap10 list-item" data-count="3000" data-name="Чашка">
                             <span class="list-item-count">3000</span>
                             <span class="list-item-name">Келих</span>
-                            <span class="list-item-name gold">Монета (3)</span>
+                            <span class="list-item-name gold">Монета</span>
                         </li>
                         <li data-id="4" class="f gap10 list-item" data-count="4000" data-name="Пляшка">
                             <span class="list-item-count">4000</span>
                             <span class="list-item-name">Пляшка</span>
-                            <span class="list-item-name gold">Якір (1)</span>
+                            <span class="list-item-name gold">Якір</span>
                         </li>
                     </ul>
                 </div>
@@ -859,20 +822,20 @@
                         <li data-id="1" class="f gap10 list-item _b_b fw" data-count="500" data-name="Стакан віскі">
                             <span class="list-item-count f_50_00">500</span>
                             <span class="list-item-name f_100_00">Фужер</span>
-                            <span class="list-item-name gold">Куля (2)</span>
+                            <span class="list-item-name gold">Куля</span>
                             <span class="list-item-name green">срібна (1)</span>
                             <span class="list-item-name green">бронза (1)</span>
                         </li>
                         <li data-id="2" class="f gap10 list-item _b_b fw" data-count="1800" data-name="Чарка">
                             <span class="list-item-count f_50_00">1800</span>
                             <span class="list-item-name f_100_00">Стакан</span>
-                            <span class="list-item-name gold">Герб (1)</span>
+                            <span class="list-item-name gold">Герб</span>
                             <span class="list-item-name green">Україні (1)</span>
                         </li>
                         <li data-id="3" class="f gap10 list-item _b_b fw" data-count="2500" data-name="Чашка">
                             <span class="list-item-count f_50_00">2500</span>
                             <span class="list-item-name f_100_00">Келих</span>
-                            <span class="list-item-name gold">Монета (3)</span>
+                            <span class="list-item-name gold">Монета</span>
                             <span class="list-item-name green">бронза (1)</span>
                             <span class="list-item-name green">срібло (1)</span>
                             <span class="list-item-name green">золото (1)</span>
@@ -880,7 +843,7 @@
                         <li data-id="4" class="f gap10 list-item _b_b fw" data-count="3000" data-name="Пляшка">
                             <span class="list-item-count f_50_00">3000</span>
                             <span class="list-item-name f_100_00">Пляшка</span>
-                            <span class="list-item-name gold">Якір (1)</span>
+                            <span class="list-item-name gold">Якір</span>
                             <span class="list-item-name green">Срібний (1)</span>
                         </li>
                     </ul>
@@ -898,119 +861,6 @@
                 </div>
             </div>
             <div class="f fw w gap10">
-                <!--        брак Вставка-->
-                <div class="f fc gap10 f_250">
-                    <div class="">
-                        <h6>
-                            Брак вставки
-                        </h6>
-                    </div>
-                    <div class="list_open shadow pad12 f gap20 f_f _br8 c7 fac">
-                        <ul class="scroll f fc gap10 text_hover countRed commaThousand" id="js_cl_43_selected">
-                            <li id="js_cl_43_selected_li" class="fs16 f f_f fac scroll_non pad8r" onclick="openMenu('js_cl_43','js_cl_43_arrow')">
-                                <span class="">
-                                    Оберіть
-                                </span>
-                                <div id="js_cl_43_arrow" class="btn_arrow">
-
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="shadow h300M _br8 f fc gap10 pad10 js_cl_43">
-                        <div class="f f_f fac gap10 _b_b pad14t pad14b">
-                            <input id="js_cl_43_search" class="input" type="text" placeholder="Пошук по назві" oninput="liveSearch('js_cl_43_list', this.value)">
-                            <img class="contain icon" src="img/iconoir_search.png" alt="">
-                        </div>
-                        <ul id="js_cl_43_list" class="scroll f fc gap10 text_hover countRed commaThousand" onclick="marking('js_cl_43_list')">
-                            <li data-id="1" class="f f_f fac list-item">
-                            <span class="w">
-                                <input class="input _b_b pad6t pad6b" type="text" placeholder="Коментар">
-                            </span>
-                            </li>
-                            <li data-id="2" class="f f_f fac list-item">
-                                <div class="f fac gap10 f_auto">
-                                    <span class="item_number" data-count="1500" data-max="1500">1500</span>
-                                    <span>Куля бронза</span>
-                                </div>
-                                <div class="f fac f_f w_100M gap5">
-                                    <button class="num_min f" aria-label="Decrement number" onclick="changeNumber(this.parentNode.parentNode, -1)" tabindex="-1" title="Decrement number" type="button"></button>
-                                    <input class="f numberDisplay shadow _br4 shadow_non" type="number" value="0" min="0" max="200" oninput="handleManualInput(this)">
-                                    <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
-                                </div>
-                            </li>
-                            <li data-id="3" class="f f_f fac list-item">
-                                <div class="f fac gap10 f_auto">
-                                    <span class="item_number" data-count="3000" data-max="3000">3000</span>
-                                    <span>Монета бронза</span>
-                                </div>
-                                <div class="f fac f_f w_100M gap5">
-                                    <button class="num_min f" aria-label="Decrement number" onclick="changeNumber(this.parentNode.parentNode, -1)" tabindex="-1" title="Decrement number" type="button"></button>
-                                    <input class="f numberDisplay shadow _br4 shadow_non" type="number" value="0" min="0" max="200" oninput="handleManualInput(this)">
-                                    <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
-                                </div>
-                            </li>
-                            <li data-id="4" class="f f_f fac list-item">
-                                <div class="f fac gap10 f_auto">
-                                    <span class="item_number" data-count="4000" data-max="4000">4000</span>
-                                    <span>Монета срібло</span>
-                                </div>
-                                <div class="f fac f_f w_100M gap5">
-                                    <button class="num_min f" aria-label="Decrement number" onclick="changeNumber(this.parentNode.parentNode, -1)" tabindex="-1" title="Decrement number" type="button"></button>
-                                    <input class="f numberDisplay shadow _br4 shadow_non" type="number" value="0" min="0" max="200" oninput="handleManualInput(this)">
-                                    <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
-                                </div>
-                            </li>
-                            <li data-id="5" class="f f_f fac list-item">
-                                <div class="f fac gap10 f_auto">
-                                    <span class="item_number" data-count="1000" data-max="1000">1000</span>
-                                    <span>Монета золото</span>
-                                </div>
-                                <div class="f fac f_f w_100M gap5">
-                                    <button class="num_min f" aria-label="Decrement number" onclick="changeNumber(this.parentNode.parentNode, -1)" tabindex="-1" title="Decrement number" type="button"></button>
-                                    <input class="f numberDisplay shadow _br4 shadow_non" type="number" value="0" min="0" max="200" oninput="handleManualInput(this)">
-                                    <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
-                                </div>
-                            </li>
-                            <li data-id="6" class="f f_f fac list-item">
-                                <div class="f fac gap10 f_auto">
-                                    <span class="item_number" data-count="3000" data-max="3000">3000</span>
-                                    <span>Якір срібло</span>
-                                </div>
-                                <div class="f fac f_f w_100M gap5">
-                                    <button class="num_min f" aria-label="Decrement number" onclick="changeNumber(this.parentNode.parentNode, -1)" tabindex="-1" title="Decrement number" type="button"></button>
-                                    <input class="f numberDisplay shadow _br4 shadow_non" type="number" value="0" min="0" max="200" oninput="handleManualInput(this)">
-                                    <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
-                                </div>
-                            </li>
-                            <li data-id="7" class="f f_f fac list-item">
-                                <div class="f fac gap10 f_auto">
-                                    <span class="item_number" data-count="3000" data-max="3000">3000</span>
-                                    <span>Герб України</span>
-                                </div>
-                                <div class="f fac f_f w_100M gap5">
-                                    <button class="num_min f" aria-label="Decrement number" onclick="changeNumber(this.parentNode.parentNode, -1)" tabindex="-1" title="Decrement number" type="button"></button>
-                                    <input class="f numberDisplay shadow _br4 shadow_non" type="number" value="0" min="0" max="200" oninput="handleManualInput(this)">
-                                    <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
-                                </div>
-                            </li>
-                            <li data-id="8" class="f f_f fac list-item">
-                                <div class="f fac gap10 f_auto">
-                                    <span class="item_number" data-count="3000" data-max="3000">3000</span>
-                                    <span>Ручка</span>
-                                </div>
-                                <div class="f fac f_f w_100M gap5">
-                                    <button class="num_min f" aria-label="Decrement number" onclick="changeNumber(this.parentNode.parentNode, -1)" tabindex="-1" title="Decrement number" type="button"></button>
-                                    <input class="f numberDisplay shadow _br4 shadow_non" type="number" value="0" min="0" max="200" oninput="handleManualInput(this)">
-                                    <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="f fc gap10 _br8">
-                            <button id="js_cl_43_enter" class="btn btn_black f_auto" type="submit" onclick="transfer('js_cl_43_list','js_cl_43_selected','js_cl_43_arrow','act','js_cl_43_search');">Застосувати</button>
-                        </div>
-                    </div>
-                </div>
                 <!--        Працівник-->
                 <div class="f fc gap10 f_200">
                     <div class="w">
@@ -1097,20 +947,20 @@
                         <li data-id="1" class="f gap10 list-item _b_b fw" data-count="500" data-name="Стакан віскі">
                             <span class="list-item-count f_50_00">500</span>
                             <span class="list-item-name f_100_00">Фужер</span>
-                            <span class="list-item-name gold">Куля (2)</span>
+                            <span class="list-item-name gold">Куля</span>
                             <span class="list-item-name green">срібна (1)</span>
                             <span class="list-item-name green">бронза (1)</span>
                         </li>
                         <li data-id="2" class="f gap10 list-item _b_b fw" data-count="1800" data-name="Чарка">
                             <span class="list-item-count f_50_00">1800</span>
                             <span class="list-item-name f_100_00">Стакан</span>
-                            <span class="list-item-name gold">Герб (1)</span>
+                            <span class="list-item-name gold">Герб</span>
                             <span class="list-item-name green">Україні (1)</span>
                         </li>
                         <li data-id="3" class="f gap10 list-item _b_b fw" data-count="2500" data-name="Чашка">
                             <span class="list-item-count f_50_00">2500</span>
                             <span class="list-item-name f_100_00">Келих</span>
-                            <span class="list-item-name gold">Монета (3)</span>
+                            <span class="list-item-name gold">Монета</span>
                             <span class="list-item-name green">бронза (1)</span>
                             <span class="list-item-name green">срібло (1)</span>
                             <span class="list-item-name green">золото (1)</span>
@@ -1118,7 +968,7 @@
                         <li data-id="4" class="f gap10 list-item _b_b fw" data-count="3000" data-name="Пляшка">
                             <span class="list-item-count f_50_00">3000</span>
                             <span class="list-item-name f_100_00">Пляшка</span>
-                            <span class="list-item-name gold">Якір (1)</span>
+                            <span class="list-item-name gold">Якір</span>
                             <span class="list-item-name green">Срібний (1)</span>
                         </li>
                     </ul>
@@ -1155,20 +1005,20 @@
                         <li data-id="1" class="f gap10 list-item _b_b fw" data-count="500" data-name="Стакан віскі">
                             <span class="list-item-count f_50_00">500</span>
                             <span class="list-item-name f_100_00">Фужер</span>
-                            <span class="list-item-name gold">Куля (2)</span>
+                            <span class="list-item-name gold">Куля</span>
                             <span class="list-item-name green">срібна (1)</span>
                             <span class="list-item-name green">бронза (1)</span>
                         </li>
                         <li data-id="2" class="f gap10 list-item _b_b fw" data-count="1800" data-name="Чарка">
                             <span class="list-item-count f_50_00">1800</span>
                             <span class="list-item-name f_100_00">Стакан</span>
-                            <span class="list-item-name gold">Герб (1)</span>
+                            <span class="list-item-name gold">Герб</span>
                             <span class="list-item-name green">Україні (1)</span>
                         </li>
                         <li data-id="3" class="f gap10 list-item _b_b fw" data-count="2500" data-name="Чашка">
                             <span class="list-item-count f_50_00">2500</span>
                             <span class="list-item-name f_100_00">Келих</span>
-                            <span class="list-item-name gold">Монета (3)</span>
+                            <span class="list-item-name gold">Монета</span>
                             <span class="list-item-name green">бронза (1)</span>
                             <span class="list-item-name green">срібло (1)</span>
                             <span class="list-item-name green">золото (1)</span>
@@ -1176,7 +1026,7 @@
                         <li data-id="4" class="f gap10 list-item _b_b fw" data-count="3000" data-name="Пляшка">
                             <span class="list-item-count f_50_00">3000</span>
                             <span class="list-item-name f_100_00">Пляшка</span>
-                            <span class="list-item-name gold">Якір (1)</span>
+                            <span class="list-item-name gold">Якір</span>
                             <span class="list-item-name green">Срібний (1)</span>
                         </li>
                     </ul>
@@ -1194,119 +1044,6 @@
                 </div>
             </div>
             <div class="f fw w gap10">
-                <!--        брак Вставка-->
-                <div class="f fc gap10 f_250">
-                    <div class="">
-                        <h6>
-                            Брак вставки
-                        </h6>
-                    </div>
-                    <div class="list_open shadow pad12 f gap20 f_f _br8 c7 fac">
-                        <ul class="scroll f fc gap10 text_hover countRed commaThousand" id="js_cl_53_selected">
-                            <li id="js_cl_53_selected_li" class="fs16 f f_f fac scroll_non pad8r" onclick="openMenu('js_cl_53','js_cl_53_arrow')">
-                                <span class="">
-                                    Оберіть
-                                </span>
-                                <div id="js_cl_53_arrow" class="btn_arrow">
-
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="shadow h300M _br8 f fc gap10 pad10 js_cl_53">
-                        <div class="f f_f fac gap10 _b_b pad14t pad14b">
-                            <input id="js_cl_53_search" class="input" type="text" placeholder="Пошук по назві" oninput="liveSearch('js_cl_53_list', this.value)">
-                            <img class="contain icon" src="img/iconoir_search.png" alt="">
-                        </div>
-                        <ul id="js_cl_53_list" class="scroll f fc gap10 text_hover countRed commaThousand" onclick="marking('js_cl_53_list')">
-                            <li data-id="1" class="f f_f fac list-item">
-                            <span class="w">
-                                <input class="input _b_b pad6t pad6b" type="text" placeholder="Коментар">
-                            </span>
-                            </li>
-                            <li data-id="2" class="f f_f fac list-item">
-                                <div class="f fac gap10 f_auto">
-                                    <span class="item_number" data-count="1500" data-max="1500">1500</span>
-                                    <span>Куля бронза</span>
-                                </div>
-                                <div class="f fac f_f w_100M gap5">
-                                    <button class="num_min f" aria-label="Decrement number" onclick="changeNumber(this.parentNode.parentNode, -1)" tabindex="-1" title="Decrement number" type="button"></button>
-                                    <input class="f numberDisplay shadow _br4 shadow_non" type="number" value="0" min="0" max="200" oninput="handleManualInput(this)">
-                                    <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
-                                </div>
-                            </li>
-                            <li data-id="3" class="f f_f fac list-item">
-                                <div class="f fac gap10 f_auto">
-                                    <span class="item_number" data-count="3000" data-max="3000">3000</span>
-                                    <span>Монета бронза</span>
-                                </div>
-                                <div class="f fac f_f w_100M gap5">
-                                    <button class="num_min f" aria-label="Decrement number" onclick="changeNumber(this.parentNode.parentNode, -1)" tabindex="-1" title="Decrement number" type="button"></button>
-                                    <input class="f numberDisplay shadow _br4 shadow_non" type="number" value="0" min="0" max="200" oninput="handleManualInput(this)">
-                                    <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
-                                </div>
-                            </li>
-                            <li data-id="4" class="f f_f fac list-item">
-                                <div class="f fac gap10 f_auto">
-                                    <span class="item_number" data-count="4000" data-max="4000">4000</span>
-                                    <span>Монета срібло</span>
-                                </div>
-                                <div class="f fac f_f w_100M gap5">
-                                    <button class="num_min f" aria-label="Decrement number" onclick="changeNumber(this.parentNode.parentNode, -1)" tabindex="-1" title="Decrement number" type="button"></button>
-                                    <input class="f numberDisplay shadow _br4 shadow_non" type="number" value="0" min="0" max="200" oninput="handleManualInput(this)">
-                                    <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
-                                </div>
-                            </li>
-                            <li data-id="5" class="f f_f fac list-item">
-                                <div class="f fac gap10 f_auto">
-                                    <span class="item_number" data-count="1000" data-max="1000">1000</span>
-                                    <span>Монета золото</span>
-                                </div>
-                                <div class="f fac f_f w_100M gap5">
-                                    <button class="num_min f" aria-label="Decrement number" onclick="changeNumber(this.parentNode.parentNode, -1)" tabindex="-1" title="Decrement number" type="button"></button>
-                                    <input class="f numberDisplay shadow _br4 shadow_non" type="number" value="0" min="0" max="200" oninput="handleManualInput(this)">
-                                    <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
-                                </div>
-                            </li>
-                            <li data-id="6" class="f f_f fac list-item">
-                                <div class="f fac gap10 f_auto">
-                                    <span class="item_number" data-count="3000" data-max="3000">3000</span>
-                                    <span>Якір срібло</span>
-                                </div>
-                                <div class="f fac f_f w_100M gap5">
-                                    <button class="num_min f" aria-label="Decrement number" onclick="changeNumber(this.parentNode.parentNode, -1)" tabindex="-1" title="Decrement number" type="button"></button>
-                                    <input class="f numberDisplay shadow _br4 shadow_non" type="number" value="0" min="0" max="200" oninput="handleManualInput(this)">
-                                    <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
-                                </div>
-                            </li>
-                            <li data-id="7" class="f f_f fac list-item">
-                                <div class="f fac gap10 f_auto">
-                                    <span class="item_number" data-count="3000" data-max="3000">3000</span>
-                                    <span>Герб України</span>
-                                </div>
-                                <div class="f fac f_f w_100M gap5">
-                                    <button class="num_min f" aria-label="Decrement number" onclick="changeNumber(this.parentNode.parentNode, -1)" tabindex="-1" title="Decrement number" type="button"></button>
-                                    <input class="f numberDisplay shadow _br4 shadow_non" type="number" value="0" min="0" max="200" oninput="handleManualInput(this)">
-                                    <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
-                                </div>
-                            </li>
-                            <li data-id="8" class="f f_f fac list-item">
-                                <div class="f fac gap10 f_auto">
-                                    <span class="item_number" data-count="3000" data-max="3000">3000</span>
-                                    <span>Ручка</span>
-                                </div>
-                                <div class="f fac f_f w_100M gap5">
-                                    <button class="num_min f" aria-label="Decrement number" onclick="changeNumber(this.parentNode.parentNode, -1)" tabindex="-1" title="Decrement number" type="button"></button>
-                                    <input class="f numberDisplay shadow _br4 shadow_non" type="number" value="0" min="0" max="200" oninput="handleManualInput(this)">
-                                    <button class="num_max f" aria-label="Increment number" onclick="changeNumber(this.parentNode.parentNode, 1)" tabindex="-1" title="Increment number" type="button"></button>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="f fc gap10 _br8">
-                            <button id="js_cl_53_enter" class="btn btn_black f_auto" type="submit" onclick="transfer('js_cl_53_list','js_cl_53_selected','js_cl_53_arrow','act','js_cl_53_search');">Застосувати</button>
-                        </div>
-                    </div>
-                </div>
                 <!--        Працівник-->
                 <div class="f fc gap10 f_200">
                     <div class="w">
@@ -1393,20 +1130,20 @@
                         <li data-id="1" class="f gap10 list-item _b_b fw" data-count="500" data-name="Стакан віскі">
                             <span class="list-item-count f_50_00">500</span>
                             <span class="list-item-name f_100_00">Фужер</span>
-                            <span class="list-item-name gold">Куля (2)</span>
+                            <span class="list-item-name gold">Куля</span>
                             <span class="list-item-name green">срібна (1)</span>
                             <span class="list-item-name green">бронза (1)</span>
                         </li>
                         <li data-id="2" class="f gap10 list-item _b_b fw" data-count="1800" data-name="Чарка">
                             <span class="list-item-count f_50_00">1800</span>
                             <span class="list-item-name f_100_00">Стакан</span>
-                            <span class="list-item-name gold">Герб (1)</span>
+                            <span class="list-item-name gold">Герб</span>
                             <span class="list-item-name green">Україні (1)</span>
                         </li>
                         <li data-id="3" class="f gap10 list-item _b_b fw" data-count="2500" data-name="Чашка">
                             <span class="list-item-count f_50_00">2500</span>
                             <span class="list-item-name f_100_00">Келих</span>
-                            <span class="list-item-name gold">Монета (3)</span>
+                            <span class="list-item-name gold">Монета</span>
                             <span class="list-item-name green">бронза (1)</span>
                             <span class="list-item-name green">срібло (1)</span>
                             <span class="list-item-name green">золото (1)</span>
@@ -1414,7 +1151,7 @@
                         <li data-id="4" class="f gap10 list-item _b_b fw" data-count="3000" data-name="Пляшка">
                             <span class="list-item-count f_50_00">3000</span>
                             <span class="list-item-name f_100_00">Пляшка</span>
-                            <span class="list-item-name gold">Якір (1)</span>
+                            <span class="list-item-name gold">Якір</span>
                             <span class="list-item-name green">Срібний (1)</span>
                         </li>
                     </ul>
@@ -1821,13 +1558,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- Вставка -->
+                <!-- Виїмка -->
                 <div id="insert" class="f fw w gap10 f_f">
-                    <!--        Вставка-->
+                    <!--        Фахівець-->
                     <div class="f fc gap10 f_250">
                         <div class="w">
                             <h6>
-                                Вставка
+                                Виїмка
                             </h6>
                         </div>
                         <div class="shadow pad12 f gap20 f_f _br8 c7 fac list_open">
@@ -1845,8 +1582,63 @@
                                 <img class="contain icon" src="img/iconoir_search.png" alt="">
                             </div>
                             <ul id="insert_list" class="scroll f fc gap20 text_hover countRed commaThousand" onclick="single_choice(event, 'insert_selected', 'li[data-id]', 'insert_stock', 'act', 'insert_search','insert_arrow')">
-                                <li data-id="1" class="f gap10 list-item" data-count="2500" data-name="Стакан віскі">
-                                    <span class="list-item-count f_80_00">2500</span>
+                                <li class="f gap10 list-item" data-id="1">
+                                    Куля
+                                </li>
+                                <li class="f gap10 list-item" data-id="2">
+                                    Монета
+                                </li>
+                                <li class="f gap10 list-item" data-id="3">
+                                    Герб
+                                </li>
+                                <li class="f gap10 list-item" data-id="4">
+                                    Якір
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--        Дія-->
+                    <div class="f fc gap10 f_250_10">
+                        <div class="w pad16r">
+                            <h6>
+                                Дія
+                            </h6>
+                        </div>
+                        <div class="list_open shadow pad12 f gap20 f_f _br8 c7 fac w" onclick="openMenu('insert_buttons','insert_buttons_arrow')">
+                            <span class="fs16" id="insert_buttons_selected">Оберіть</span>
+                            <div id="insert_buttons_arrow" class="btn_arrow"></div>
+                        </div>
+                        <div id="insert_buttons" class="shadow f fc gap10 pad12 _br8 master_buttons">
+                            <button class="btn btn_blue f_auto" type="submit"> Додати </button>
+                            <button class="btn btn_border" type="submit"> Видалити </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Вставка -->
+                <div id="stick" class="f fw w gap10 f_f">
+                    <!--        Вставка-->
+                    <div class="f fc gap10 f_250">
+                        <div class="w">
+                            <h6>
+                                Вставка
+                            </h6>
+                        </div>
+                        <div class="shadow pad12 f gap20 f_f _br8 c7 fac list_open">
+                            <div id="stick_selected" class="fs16 w">
+                                Оберіть
+                            </div>
+                            <div id="stick_plus" class="plus btn_blue" onclick="add_glass('stick_selected')">
+                            </div>
+                            <div id="stick_arrow" class="btn_arrow" onclick="openMenu('stick_stock','stick_arrow')">
+                            </div>
+                        </div>
+                        <div class="shadow h300M _br8 f fc gap10 pad10 stick_stock">
+                            <div class="f f_f fac gap10 _b_b pad14t pad14b">
+                                <input id="stick_search" class="input" type="text" placeholder="Пошук по назві" oninput="liveSearch('stick_list', this.value)">
+                                <img class="contain icon" src="img/iconoir_search.png" alt="">
+                            </div>
+                            <ul id="stick_list" class="scroll f fc gap20 text_hover countRed commaThousand" onclick="single_choice(event, 'stick_selected', 'li[data-id]', 'stick_stock', 'act', 'stick_search','stick_arrow')">
+                                <li data-id="1" class="f gap10 list-item" data-name="Стакан віскі">
                                     <span class="list-item-name">Куля срібна</span>
                                 </li>
                                 <li data-id="2" class="f gap10 list-item" data-count="1500" data-name="Чарка">
@@ -1898,11 +1690,11 @@
                                 Дія
                             </h6>
                         </div>
-                        <div class="list_open shadow pad12 f gap20 f_f _br8 c7 fac w" onclick="openMenu('insert_buttons','insert_buttons_arrow')">
-                            <span class="fs16" id="insert_buttons_selected">Оберіть</span>
-                            <div id="insert_buttons_arrow" class="btn_arrow"></div>
+                        <div class="list_open shadow pad12 f gap20 f_f _br8 c7 fac w" onclick="openMenu('stick_buttons','stick_buttons_arrow')">
+                            <span class="fs16" id="stick_buttons_selected">Оберіть</span>
+                            <div id="stick_buttons_arrow" class="btn_arrow"></div>
                         </div>
-                        <div id="insert_buttons" class="shadow f fc gap10 pad12 _br8 insert_buttons">
+                        <div id="stick_buttons" class="shadow f fc gap10 pad12 _br8 insert_buttons">
                             <button class="btn btn_blue f_auto" type="submit"> Додати </button>
                             <button class="btn btn_border" type="submit"> Видалити </button>
                         </div>
